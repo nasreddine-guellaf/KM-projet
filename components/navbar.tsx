@@ -23,7 +23,7 @@ export default function Navbar() {
           <Home className="w-4 h-4 mr-1" />
           Accueil
         </NavLink>
-        <NavLink href="/ressources">
+        <NavLink href="/ressources/filieres">
           <BookOpen className="w-4 h-4 mr-1" />
           Ressources
         </NavLink>
