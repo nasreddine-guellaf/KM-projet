@@ -39,7 +39,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link href="/ressources">
+            <Link href="/ressources/filieres">
               <Button size="lg" className="bg-blue-700 hover:bg-blue-800 text-white px-8">
                 <BookOpen className="mr-2 h-5 w-5" />
                 Découvrir les ressources

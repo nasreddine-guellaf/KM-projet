@@ -1,63 +1,42 @@
 import Navbar from "@/components/navbar"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { BookOpen, FileText, Briefcase, Video, ArrowLeft } from "lucide-react"
+import { ArrowLeft, Brain, Database, Shield, BarChart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-export default function RessourcesPage() {
-  const resources = [
+export default function FilieresRessourcesPage() {
+  const filieres = [
     {
-      title: "Cours",
-      description: "Accédez aux supports de cours pour toutes les matières",
-      icon: <BookOpen className="h-12 w-12 text-blue-600" />,
-      link: "/ressources/cours",
-      items: [
-        "Mathématiques",
-        "Algorithmique",
-        "Programmation",
-        "Bases de données",
-        "Réseaux",
-        "Systèmes d'exploitation",
-      ],
+      title: "ICSD",
+      description: "Ingénierie des Connaissances et Science des Données",
+      icon: <Brain className="h-12 w-12 text-blue-600" />,
+      details: "Accédez aux cours, TD et TP spécifiques à la filière ICSD.",
+      link: "/filieres/icsd",
+      color: "bg-blue-50",
     },
     {
-      title: "TD & TP",
-      description: "Téléchargez les travaux dirigés et pratiques",
-      icon: <FileText className="h-12 w-12 text-blue-600" />,
-      link: "/ressources/td-tp",
-      items: [
-        "Exercices corrigés",
-        "Travaux pratiques",
-        "Projets académiques",
-        "Fiches de révision",
-        "QCM d'entraînement",
-      ],
+      title: "IIN",
+      description: "Ingénierie de l'Information Numérique",
+      icon: <Database className="h-12 w-12 text-blue-600" />,
+      details: "Accédez aux cours, TD et TP spécifiques à la filière IIN.",
+      link: "/filieres/iin",
+      color: "bg-green-50",
     },
     {
-      title: "Stages",
-      description: "Trouvez des offres de stages adaptées à votre filière",
-      icon: <Briefcase className="h-12 w-12 text-blue-600" />,
-      link: "/ressources/stages",
-      items: [
-        "Offres de stages",
-        "Conseils CV et lettre de motivation",
-        "Retours d'expérience",
-        "Entreprises partenaires",
-        "Préparation aux entretiens",
-      ],
+      title: "ISSIC",
+      description: "Ingénierie de la Sécurité des Systèmes d'Information et Cyberdéfense",
+      icon: <Shield className="h-12 w-12 text-blue-600" />,
+      details: "Accédez aux cours, TD et TP spécifiques à la filière ISSIC.",
+      link: "/filieres/issic",
+      color: "bg-red-50",
     },
     {
-      title: "Tutoriels",
-      description: "Vidéos et guides créés par les étudiants",
-      icon: <Video className="h-12 w-12 text-blue-600" />,
-      link: "/ressources/tutoriels",
-      items: [
-        "Tutoriels vidéo",
-        "Guides pratiques",
-        "Astuces et conseils",
-        "Outils recommandés",
-        "Ressources externes",
-      ],
+      title: "ISITD",
+      description: "Ingénierie des Systèmes d'Information et de la Transformation Digitale",
+      icon: <BarChart className="h-12 w-12 text-blue-600" />,
+      details: "Accédez aux cours, TD et TP spécifiques à la filière ISITD.",
+      link: "/filieres/isitd",
+      color: "bg-purple-50",
     },
   ]
 
@@ -70,39 +49,53 @@ export default function RessourcesPage() {
             <ArrowLeft className="w-4 h-4 mr-2" />
             Retour à l'accueil
           </Link>
-          <h1 className="text-4xl font-bold text-blue-900 mb-4">Ressources Pédagogiques</h1>
+          <h1 className="text-4xl font-bold text-blue-900 mb-4">Ressources par Filière</h1>
           <p className="text-blue-700 max-w-3xl">
-            Découvrez toutes les ressources partagées par la communauté des étudiants de l'ESI. Ces documents sont
-            organisés par catégorie pour faciliter vos recherches.
+            Sélectionnez une filière pour accéder aux cours, TD et TP spécifiques à cette spécialisation. Chaque filière
+            propose des ressources adaptées à son programme d'études.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {resources.map((resource, index) => (
+          {filieres.map((filiere, index) => (
             <Card key={index} className="border-blue-100 hover:shadow-lg transition-shadow">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <div className="p-3 rounded-full bg-blue-100">{resource.icon}</div>
+              <CardHeader className={`flex flex-row items-center gap-4 ${filiere.color} rounded-t-lg`}>
+                <div className="p-3 rounded-full bg-white">{filiere.icon}</div>
                 <div>
-                  <CardTitle className="text-2xl text-blue-800">{resource.title}</CardTitle>
-                  <CardDescription className="text-blue-600">{resource.description}</CardDescription>
+                  <CardTitle className="text-2xl text-blue-800">{filiere.title}</CardTitle>
+                  <CardDescription className="text-blue-600">{filiere.description}</CardDescription>
                 </div>
               </CardHeader>
-              <CardContent>
-                <ul className="list-disc pl-6 mb-6 text-blue-700">
-                  {resource.items.map((item, i) => (
-                    <li key={i} className="mb-1">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <Link href={resource.link}>
+              <CardContent className="p-6">
+                <p className="text-blue-700 mb-6">{filiere.details}</p>
+                <Link href={filiere.link}>
                   <Button className="w-full bg-blue-700 hover:bg-blue-800 text-white">
-                    Accéder aux {resource.title}
+                    Accéder aux ressources {filiere.title}
                   </Button>
                 </Link>
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="bg-white p-6 rounded-lg border border-blue-100 shadow-sm">
+          <h2 className="text-2xl font-bold text-blue-900 mb-4">Ressources communes</h2>
+          <p className="text-blue-700 mb-6">
+            Certaines ressources sont communes à toutes les filières, notamment pour les matières générales du tronc
+            commun.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/ressources/cours">
+              <Button variant="outline" className="w-full text-blue-700 border-blue-500 hover:bg-blue-100">
+                Accéder aux cours communs
+              </Button>
+            </Link>
+            <Link href="/ressources/td-tp">
+              <Button variant="outline" className="w-full text-blue-700 border-blue-500 hover:bg-blue-100">
+                Accéder aux TD & TP communs
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </main>
