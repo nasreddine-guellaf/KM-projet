@@ -11,20 +11,36 @@ export default function IcsdPage() {
     semestre1: {
       cours: [
         {
-          title: "Introduction à la science des données",
-          author: "Prof. Benali",
-          date: "15/09/2023",
+          title: "initiation aux reseaux informatiques",
+          author: "Prof. ABOURIZQ",
+          date: "23/03/2024",
           format: "PDF",
-          size: "3.2 MB",
-          driveLink: "https://drive.google.com/drive/folders/your-folder-id-here",
+          size: "__ MB",
+          driveLink: "https://drive.google.com/drive/folders/1obqrKef1Y_3GN2WksYAG1kEXvzA8MGMm?usp=drive_link",
         },
         {
-          title: "Fondements de l'intelligence artificielle",
-          author: "Prof. Kaddour",
-          date: "22/09/2023",
+          title: "Economie generale",
+          author: "Prof. ASSABANE",
+          date: "23/03/2024",
           format: "PDF",
-          size: "4.5 MB",
-          driveLink: "https://drive.google.com/drive/folders/your-folder-id-here",
+          size: "__ MB",
+          driveLink: "https://drive.google.com/drive/folders/1njfiF9WhyUQiBoNDBGD-4P05qKbpD9cm?usp=drive_link",
+        },
+        {
+          title: "Documents structuree",
+          author: "Prof. ",
+          date: "23/03/2024",
+          format: "PDF",
+          size: "__ MB",
+          driveLink: "https://drive.google.com/drive/folders/1nFNsXgoe-fC4gjm-AVeFdB7gGeyux3WK?usp=drive_link",
+        },
+        {
+          title: "Algorithmique",
+          author: "Prof. ABOURIZQ",
+          date: "23/03/2024",
+          format: "PDF",
+          size: "__ MB",
+          driveLink: "https://drive.google.com/drive/folders/1mmM6HFtSPumLyKwfccZeijMyAa6uUT0h?usp=drive_link",
         },
       ],
       td: [
@@ -88,6 +104,32 @@ export default function IcsdPage() {
           size: "0.551 MB",
           driveLink: "https://drive.google.com/file/d/1lZmX4vqjgKRGNKmRy0QyxWbB52_XpOp6/view?usp=drivesdk ",
         },
+        {
+          title: "Probabilite ( non disp pour l'instant )",
+          author: "Prof. Bouali",
+          date: "23/03/2024",
+          format: "PDF",
+          size: "__ MB",
+          driveLink: "https://drive.google.com/file/d/1lZmX4vqjgKRGNKmRy0QyxWbB52_XpOp6/view?usp=drivesdk ",
+        },
+        {
+          title: "Programmation Web en PHP",
+          author: "Prof. Maqboul",
+          date: "23/03/2024",
+          format: "PDF",
+          size: "__ MB",
+          driveLink: "https://drive.google.com/drive/folders/1lqMJDYSNeJ3X3Q1ME_K3qoQLrrX6iOLO ",
+        },
+        {
+          title: "algorithmique avancee",
+          author: "Prof. Haqiq",
+          date: "23/03/2024",
+          format: "PDF",
+          size: "__ MB",
+          driveLink: "https://drive.google.com/drive/folders/1m8QjWPS6fnYzPvnrL8GuSAAtHR1D9T8U  ",
+        },
+        
+
       ],
       td: [
         {
