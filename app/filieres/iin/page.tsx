@@ -253,16 +253,6 @@ export default function IinPage() {
             numérique. Elle couvre les domaines des bases de données, des systèmes d'information et de l'intégration de
             données.
           </p>
-          <div className="bg-white p-6 rounded-lg border border-blue-100 shadow-sm mb-8">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Débouchés professionnels</h2>
-            <ul className="list-disc pl-6 text-blue-700 space-y-2">
-              <li>Architecte de systèmes d'information</li>
-              <li>Ingénieur en bases de données</li>
-              <li>Chef de projet SI</li>
-              <li>Consultant en intégration de données</li>
-              <li>Administrateur de bases de données</li>
-            </ul>
-          </div>
         </div>
 
         <Tabs defaultValue="semestre1" className="mb-12">

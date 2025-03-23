@@ -255,16 +255,6 @@ export default function IssicPage() {
             cyberdéfense. Elle couvre les domaines de la sécurité informatique, de la cryptographie et de la protection
             des données.
           </p>
-          <div className="bg-white p-6 rounded-lg border border-blue-100 shadow-sm mb-8">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Débouchés professionnels</h2>
-            <ul className="list-disc pl-6 text-blue-700 space-y-2">
-              <li>Responsable de la sécurité des systèmes d'information (RSSI)</li>
-              <li>Expert en cybersécurité</li>
-              <li>Pentesteur / Ethical Hacker</li>
-              <li>Analyste en sécurité informatique</li>
-              <li>Consultant en cyberdéfense</li>
-            </ul>
-          </div>
         </div>
 
         <Tabs defaultValue="semestre1" className="mb-12">

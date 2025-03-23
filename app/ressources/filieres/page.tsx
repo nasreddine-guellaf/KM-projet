@@ -47,12 +47,12 @@ export default function FilieresRessourcesPage() {
         <div className="mb-8">
           <Link href="/" className="inline-flex items-center text-blue-700 hover:text-blue-900 mb-6">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Retour à l'accueil
+            Retour à l&apos;accueil
           </Link>
           <h1 className="text-4xl font-bold text-blue-900 mb-4">Ressources par Filière</h1>
           <p className="text-blue-700 max-w-3xl">
             Sélectionnez une filière pour accéder aux cours, TD et TP spécifiques à cette spécialisation. Chaque filière
-            propose des ressources adaptées à son programme d'études.
+            propose des ressources adaptées à son programme d&apos;études.
           </p>
         </div>
 
@@ -76,26 +76,6 @@ export default function FilieresRessourcesPage() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="bg-white p-6 rounded-lg border border-blue-100 shadow-sm">
-          <h2 className="text-2xl font-bold text-blue-900 mb-4">Ressources communes</h2>
-          <p className="text-blue-700 mb-6">
-            Certaines ressources sont communes à toutes les filières, notamment pour les matières générales du tronc
-            commun.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/ressources/cours">
-              <Button variant="outline" className="w-full text-blue-700 border-blue-500 hover:bg-blue-100">
-                Accéder aux cours communs
-              </Button>
-            </Link>
-            <Link href="/ressources/td-tp">
-              <Button variant="outline" className="w-full text-blue-700 border-blue-500 hover:bg-blue-100">
-                Accéder aux TD & TP communs
-              </Button>
-            </Link>
-          </div>
         </div>
       </div>
     </main>

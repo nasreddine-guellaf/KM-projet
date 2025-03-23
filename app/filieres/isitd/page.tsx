@@ -255,16 +255,6 @@ export default function IsitdPage() {
             l'optimisation des processus métier. Elle couvre les domaines de la gestion de projets IT, des systèmes
             d'information et de l'innovation technologique.
           </p>
-          <div className="bg-white p-6 rounded-lg border border-blue-100 shadow-sm mb-8">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Débouchés professionnels</h2>
-            <ul className="list-disc pl-6 text-blue-700 space-y-2">
-              <li>Chef de projet transformation digitale</li>
-              <li>Consultant en systèmes d'information</li>
-              <li>Architecte d'entreprise</li>
-              <li>Responsable innovation</li>
-              <li>Business Analyst</li>
-            </ul>
-          </div>
         </div>
 
         <Tabs defaultValue="semestre1" className="mb-12">

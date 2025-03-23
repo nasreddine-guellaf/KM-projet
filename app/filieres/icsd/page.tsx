@@ -122,6 +122,7 @@ export default function IcsdPage() {
           size: "__ MB",
           driveLink: "https://drive.google.com/drive/folders/1r4vt8Btj6frleivFdgtxnMJBO-e8h4eh?usp=drive_link",
         },
+
       ],
       td: [
         {
@@ -254,16 +255,6 @@ export default function IcsdPage() {
             La filière ICSD forme des ingénieurs spécialisés dans l'analyse et l'exploitation des données massives. Elle
             couvre les domaines de l'intelligence artificielle, du machine learning, de la data science et du big data.
           </p>
-          <div className="bg-white p-6 rounded-lg border border-blue-100 shadow-sm mb-8">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Débouchés professionnels</h2>
-            <ul className="list-disc pl-6 text-blue-700 space-y-2">
-              <li>Data Scientist</li>
-              <li>Ingénieur en Intelligence Artificielle</li>
-              <li>Analyste de données</li>
-              <li>Consultant en Big Data</li>
-              <li>Chercheur en Machine Learning</li>
-            </ul>
-          </div>
         </div>
 
         <Tabs defaultValue="semestre1" className="mb-12">
