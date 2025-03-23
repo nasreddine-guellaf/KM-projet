@@ -2,9 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { LogIn } from "lucide-react"
+import { BookOpen, LogIn } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 
 export default function LoginPage() {
   return (
@@ -12,7 +11,8 @@ export default function LoginPage() {
       <Card className="w-full max-w-md border-blue-100">
         <CardHeader className="space-y-1 flex flex-col items-center">
           <div className="flex items-center space-x-2 mb-2">
-            <Image src="/images/w27-logo.png" alt="W27 Logo" width={80} height={32} className="h-8 w-auto" />
+            <BookOpen className="w-8 h-8 text-blue-700" />
+            <span className="text-blue-800 font-medium text-xl">Wiki27</span>
           </div>
           <CardTitle className="text-2xl text-center text-blue-900">Connexion</CardTitle>
           <CardDescription className="text-center text-blue-700">

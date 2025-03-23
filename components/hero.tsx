@@ -5,7 +5,6 @@ import { motion } from "framer-motion"
 import { BookOpen, Users } from "lucide-react"
 import { FloatingPaper } from "@/components/floating-paper"
 import Link from "next/link"
-import Image from "next/image"
 
 export default function Hero() {
   return (
@@ -18,15 +17,10 @@ export default function Hero() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <div className="flex justify-center mb-6">
-              <Image
-                src="/images/w27-logo.png"
-                alt="W27 Logo"
-                width={300}
-                height={120}
-                className="h-auto w-auto max-w-[300px]"
-              />
-            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-blue-900 mb-6">
+              Bienvenue sur
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800"> Wiki27</span>
+            </h1>
           </motion.div>
 
           <motion.p

@@ -2,10 +2,9 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Home, HelpCircle, Menu, LogIn, MessageSquare, X } from "lucide-react"
+import { BookOpen, Home, HelpCircle, Menu, LogIn, MessageSquare, X } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import Image from "next/image"
 import type React from "react"
 
 export default function Navbar() {
@@ -23,7 +22,8 @@ export default function Navbar() {
         className="flex items-center justify-between px-6 py-4 backdrop-blur-sm border-b border-blue-200 bg-white/80 relative z-50"
       >
         <Link href="/" className="flex items-center space-x-2">
-          <Image src="/images/w27-logo.png" alt="W27 Logo" width={100} height={40} className="h-10 w-auto" />
+          <BookOpen className="w-8 h-8 text-blue-700" />
+          <span className="text-blue-800 font-medium text-xl">Wiki27</span>
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
@@ -32,7 +32,7 @@ export default function Navbar() {
             Accueil
           </NavLink>
           <NavLink href="/ressources/filieres">
-            <Image src="/images/w27-logo.png" alt="W27 Logo" width={16} height={16} className="w-4 h-4 mr-1" />
+            <BookOpen className="w-4 h-4 mr-1" />
             Ressources
           </NavLink>
           <NavLink href="/forums">
@@ -73,7 +73,7 @@ export default function Navbar() {
               Accueil
             </MobileNavLink>
             <MobileNavLink href="/ressources/filieres" onClick={toggleMenu}>
-              <Image src="/images/w27-logo.png" alt="W27 Logo" width={20} height={20} className="w-5 h-5 mr-2" />
+              <BookOpen className="w-5 h-5 mr-2" />
               Ressources
             </MobileNavLink>
             <MobileNavLink href="/forums" onClick={toggleMenu}>
