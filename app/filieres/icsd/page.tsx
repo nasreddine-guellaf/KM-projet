@@ -64,6 +64,30 @@ export default function IcsdPage() {
           size: "2.3 MB",
           driveLink: "https://drive.google.com/file/d/1IJOalDTn8va4risCioviCXWdvI_ScPHx/view?usp=drive_link",
         },
+        {
+          title: "Analyse et conception des SI relationels",
+          author: "Prof. EL HALOUI",
+          date: "23/03/2024",
+          format: "PDF",
+          size: "__ MB",
+          driveLink: "https://drive.google.com/drive/folders/1u8eVtKoMljQ23h02NDp1BXRmtIB-qjD-?usp=sharing",
+        },
+        {
+          title: "Technologie Web",
+          author: "Prof. SBIHI Boubker",
+          date: "23/03/2024",
+          format: "PDF",
+          size: "0.551 MB",
+          driveLink: "https://drive.google.com/file/d/1lZmX4vqjgKRGNKmRy0QyxWbB52_XpOp6/view?usp=drivesdk ",
+        },
+        {
+          title: "statistique descriptive",
+          author: "Prof. Benyaacoub",
+          date: "23/03/2024",
+          format: "PDF",
+          size: "0.551 MB",
+          driveLink: "https://drive.google.com/file/d/1lZmX4vqjgKRGNKmRy0QyxWbB52_XpOp6/view?usp=drivesdk ",
+        },
       ],
       td: [
         {

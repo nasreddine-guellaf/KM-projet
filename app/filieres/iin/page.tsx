@@ -11,7 +11,7 @@ export default function IinPage() {
     semestre1: {
       cours: [
         {
-          title: "Systèmes d'information et architecture",
+          title: "test",
           author: "Prof. Mesbah",
           date: "12/09/2023",
           format: "PDF",
