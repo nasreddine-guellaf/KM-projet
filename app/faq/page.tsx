@@ -123,11 +123,9 @@ export default function FAQPage() {
 
         <div className="mt-12 bg-white p-6 rounded-lg border border-blue-100 shadow-sm text-center">
           <h2 className="text-2xl font-bold text-blue-900 mb-4">Vous n'avez pas trouvé votre réponse ?</h2>
-          <p className="text-blue-700 mb-6">
-            Posez votre question sur notre forum d'entraide ou contactez-nous directement.
-          </p>
+          <p className="text-blue-700 mb-6">Posez votre question sur notre formulaire ou contactez-nous directement.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/forums/entraide">
+            <Link href="/poser-question">
               <Button className="bg-blue-700 hover:bg-blue-800 text-white px-8">Poser une question</Button>
             </Link>
             <Link href="/contact">
