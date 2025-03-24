@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { BookOpen, UserPlus } from "lucide-react"
+import { UserPlus } from "lucide-react"
 import Link from "next/link"
 import { Checkbox } from "@/components/ui/checkbox"
+import Image from "next/image"
 
 export default function RegisterPage() {
   return (
@@ -12,8 +13,7 @@ export default function RegisterPage() {
       <Card className="w-full max-w-md border-blue-100">
         <CardHeader className="space-y-1 flex flex-col items-center">
           <div className="flex items-center space-x-2 mb-2">
-            <BookOpen className="w-8 h-8 text-blue-700" />
-            <span className="text-blue-800 font-medium text-xl">Wiki27</span>
+            <Image src="/images/w27-logo.svg" alt="W27 Logo" width={80} height={32} className="h-8 w-auto" />
           </div>
           <CardTitle className="text-2xl text-center text-blue-900">Créer un compte</CardTitle>
           <CardDescription className="text-center text-blue-700">
