@@ -128,7 +128,7 @@ export default function PoserQuestionPage() {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="votre.email@esi.dz"
+                    placeholder="votre.email@esi.ac.ma"
                     className="border-blue-200"
                     required
                   />

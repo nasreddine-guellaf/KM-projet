@@ -128,7 +128,7 @@ export default function FAQPage() {
             <Link href="/poser-question">
               <Button className="bg-blue-700 hover:bg-blue-800 text-white px-8">Poser une question</Button>
             </Link>
-            <a href="mailto:contact@wiki27.com">
+            <a href="nasreddineguellaf@gmail.com">
               <Button variant="outline" className="text-blue-700 border-blue-500 hover:bg-blue-100">
                 Nous contacter
               </Button>
