@@ -1,7 +1,6 @@
 import Navbar from "@/components/navbar"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, Video, FileText, ExternalLink, Clock, Eye, ThumbsUp } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -17,6 +16,7 @@ export default function TutorielsPage() {
         vues: 456,
         likes: 87,
         thumbnail: "/placeholder.svg?height=180&width=320",
+        url: "https://www.youtube.com/watch?v=KJgsSFOSQv0", // Lien YouTube
       },
       {
         title: "Comprendre les algorithmes de tri",
@@ -26,6 +26,7 @@ export default function TutorielsPage() {
         vues: 389,
         likes: 72,
         thumbnail: "/placeholder.svg?height=180&width=320",
+        url: "https://www.youtube.com/watch?v=kPRA0W1kECg", // Lien YouTube
       },
       {
         title: "Bases de données relationnelles expliquées",
@@ -35,6 +36,7 @@ export default function TutorielsPage() {
         vues: 412,
         likes: 94,
         thumbnail: "/placeholder.svg?height=180&width=320",
+        url: "https://www.youtube.com/watch?v=HXV3zeQKqGY", // Lien YouTube
       },
     ],
     guides: [
@@ -46,6 +48,7 @@ export default function TutorielsPage() {
         pages: 24,
         vues: 523,
         likes: 112,
+        url: "https://git-scm.com/book/fr/v2", // Lien site web
       },
       {
         title: "Configurer son environnement de développement",
@@ -55,6 +58,7 @@ export default function TutorielsPage() {
         pages: 18,
         vues: 478,
         likes: 95,
+        url: "https://www.freecodecamp.org/news/how-to-set-up-a-development-environment/", // Lien site web
       },
       {
         title: "Méthodes efficaces de révision pour les examens",
@@ -64,6 +68,7 @@ export default function TutorielsPage() {
         pages: 15,
         vues: 612,
         likes: 143,
+        url: "https://www.oxfordlearning.com/how-to-study-effectively/", // Lien site web
       },
     ],
   }
@@ -130,10 +135,15 @@ export default function TutorielsPage() {
                           <span>{tutoriel.likes} likes</span>
                         </div>
                       </div>
-                      <Button className="bg-blue-700 hover:bg-blue-800 text-white">
+                      <a
+                        href={tutoriel.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-md bg-blue-700 px-4 py-2 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                      >
                         <Video className="mr-2 h-4 w-4" />
-                        Regarder le tutoriel
-                      </Button>
+                        Regarder le tutoriel sur YouTube
+                      </a>
                     </div>
                   </div>
                 </CardContent>
@@ -172,10 +182,15 @@ export default function TutorielsPage() {
                         </div>
                       </div>
                     </div>
-                    <Button className="bg-blue-700 hover:bg-blue-800 text-white">
+                    <a
+                      href={guide.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center rounded-md bg-blue-700 px-4 py-2 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Consulter le guide
-                    </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
