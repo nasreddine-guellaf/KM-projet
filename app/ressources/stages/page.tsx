@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { ArrowLeft, ExternalLink, Briefcase, Building, Calendar, MapPin } from "lucide-react"
+import { ArrowLeft, ExternalLink, Briefcase, Building, Calendar, MapPin, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
@@ -17,6 +17,8 @@ export default function StagesPage() {
       description:
         "Développement d'applications web modernes utilisant les frameworks React et Node.js. Vous participerez à la conception et à l'implémentation de nouvelles fonctionnalités pour nos clients.",
       competences: ["HTML/CSS", "JavaScript", "React", "Node.js"],
+      lien: "https://www.linkedin.com/company/techsolutions-algerie",
+      source: "LinkedIn",
     },
     {
       title: "Stage en data science",
@@ -28,6 +30,8 @@ export default function StagesPage() {
       description:
         "Analyse de données et création de modèles prédictifs pour optimiser les processus métier. Vous travaillerez sur des projets réels avec des volumes importants de données.",
       competences: ["Python", "Machine Learning", "SQL", "Data Visualization"],
+      lien: "https://www.datainsight-dz.com/carrieres",
+      source: "Site web",
     },
     {
       title: "Stage en cybersécurité",
@@ -39,6 +43,8 @@ export default function StagesPage() {
       description:
         "Participation à des audits de sécurité et mise en place de solutions de protection des systèmes d'information. Vous serez formé aux dernières techniques de cyberdéfense.",
       competences: ["Sécurité réseau", "Cryptographie", "Analyse de vulnérabilités", "Ethical Hacking"],
+      lien: "https://www.linkedin.com/company/securenet-algerie",
+      source: "LinkedIn",
     },
     {
       title: "Stage en gestion de projet IT",
@@ -50,6 +56,8 @@ export default function StagesPage() {
       description:
         "Accompagnement de projets de transformation digitale pour nos clients. Vous participerez à toutes les phases du projet, de l'analyse des besoins à la livraison finale.",
       competences: ["Gestion de projet", "Méthodologies Agile", "UML", "Business Analysis"],
+      lien: "https://www.consultit-dz.com/stages",
+      source: "Site web",
     },
     {
       title: "Stage en bases de données",
@@ -61,6 +69,8 @@ export default function StagesPage() {
       description:
         "Conception et optimisation de bases de données pour des applications d'entreprise. Vous travaillerez sur l'amélioration des performances et la migration de données.",
       competences: ["SQL", "Oracle", "MongoDB", "ETL"],
+      lien: "https://www.linkedin.com/company/infosystems-algerie",
+      source: "LinkedIn",
     },
   ]
 
@@ -125,10 +135,16 @@ export default function StagesPage() {
                 </div>
               </CardContent>
               <CardFooter className="px-6 py-4 bg-gray-50 border-t border-blue-100">
-                <Button className="bg-blue-700 hover:bg-blue-800 text-white">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Postuler
-                </Button>
+                <a href={stage.lien} target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-blue-700 hover:bg-blue-800 text-white">
+                    {stage.source === "LinkedIn" ? (
+                      <Linkedin className="mr-2 h-4 w-4" />
+                    ) : (
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                    )}
+                    Voir l'offre sur {stage.source}
+                  </Button>
+                </a>
               </CardFooter>
             </Card>
           ))}
