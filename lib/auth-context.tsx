@@ -3,6 +3,7 @@
 import type React from "react"
 import { createContext, useContext, useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { setCookie, deleteCookie } from "cookies-next"
 
 // Type pour les utilisateurs
 type User = {
@@ -53,6 +54,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       } catch (error) {
         console.error("Erreur lors du chargement de l'utilisateur:", error)
         localStorage.removeItem("user")
+        deleteCookie("auth")
       }
     }
     setIsLoading(false)
@@ -102,6 +104,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     setUser(safeUser)
     localStorage.setItem("user", JSON.stringify(safeUser))
 
+    // Définir un cookie pour le middleware
+    setCookie("auth", "true", { maxAge: 60 * 60 * 24 * 7 }) // 7 jours
+
     // Rediriger vers la page d'accueil
     router.push("/")
     return { success: true }
@@ -111,7 +116,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const signOut = () => {
     setUser(null)
     localStorage.removeItem("user")
-    router.push("/")
+    deleteCookie("auth")
+    router.push("/login")
   }
 
   const value = {
