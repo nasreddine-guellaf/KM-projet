@@ -2,11 +2,10 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { BookOpen, Home, HelpCircle, Menu, MessageSquare, X, LogIn } from "lucide-react"
+import { BookOpen, Home, HelpCircle, Menu, LogIn, MessageSquare, X } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import type React from "react"
-import { AuthButton } from "./auth-button"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -47,7 +46,17 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
-          <AuthButton />
+          <Link href="/register">
+            <Button variant="ghost" className="text-blue-700 hover:text-blue-900">
+              S'inscrire
+            </Button>
+          </Link>
+          <Link href="/login">
+            <Button className="bg-blue-700 hover:bg-blue-800 text-white">
+              <LogIn className="w-4 h-4 mr-2" />
+              Connexion
+            </Button>
+          </Link>
         </div>
 
         <Button variant="ghost" size="icon" className="md:hidden text-blue-700" onClick={toggleMenu}>
