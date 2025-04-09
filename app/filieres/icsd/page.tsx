@@ -126,7 +126,7 @@ export default function IcsdPage() {
       ],
       td: [
         {
-          title: "TD1 - Analyse exploratoire des données",
+          title: "TD1 - initiations aux reseaux informatique",
           author: "Prof. Benali",
           date: "20/09/2023",
           format: "PDF",
